@@ -1,0 +1,36 @@
+namespace ConsoleApplication1.Enums
+{
+    public enum CardTyping
+    {
+        AQUA,
+        BEAST,
+        CONTINUOUS,
+        COUNTER,
+        CYBERSE,
+        DINOSAUR,
+        DIVINE_BEAST,
+        DRAGON,
+        EQUIP,
+        FAIRY,
+        FIELD,
+        FIEND,
+        FISH,
+        INSECT,
+        MACHINE,
+        NORMAL,
+        PLANT,
+        PSYCHIC,
+        PYRO,
+        QUICK_PLAY,
+        REPTILE,
+        RITUAL,
+        ROCK,
+        SEA_SERPENT,
+        SPELLCASTER,
+        THUNDER,
+        WARRIOR,
+        WINGED_BEAST,
+        WYRM,
+        ZOMBIE
+    }
+}

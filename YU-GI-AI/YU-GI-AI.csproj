@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{FC68EFB8-3B96-45C1-96EB-0C4BE2FCD96D}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>ConsoleApplication1</RootNamespace>
+        <AssemblyName>YU-GI-AI</AssemblyName>
+        <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="MedallionRandom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\MedallionRandom.1.0.1\lib\net35\MedallionRandom.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Actions\DoNothing.cs" />
+        <Compile Include="Actions\Action.cs" />
+        <Compile Include="Actions\ActivateEffect.cs" />
+        <Compile Include="Actions\Battle.cs" />
+        <Compile Include="Actions\FlipSummon.cs" />
+        <Compile Include="Actions\FusionSummon.cs" />
+        <Compile Include="Actions\LinkSummon.cs" />
+        <Compile Include="Actions\NormalSummon.cs" />
+        <Compile Include="Actions\PendulumSummon.cs" />
+        <Compile Include="Actions\RitualSummon.cs" />
+        <Compile Include="Actions\Set.cs" />
+        <Compile Include="Actions\SpecialSummon.cs" />
+        <Compile Include="Actions\SynchroSummon.cs" />
+        <Compile Include="Actions\XyzSummon.cs" />
+        <Compile Include="Card.cs" />
+        <Compile Include="Effects\ConcreteEffects\Destroy.cs" />
+        <Compile Include="Effects\ConcreteEffects\Negate.cs" />
+        <Compile Include="Effects\Effects.cs" />
+        <Compile Include="Effects\EffectTypes\ContinuousEffect.cs" />
+        <Compile Include="Effects\EffectTypes\FlipEffect.cs" />
+        <Compile Include="Effects\EffectTypes\IgnitionEffect.cs" />
+        <Compile Include="Effects\EffectTypes\LingeringEffect.cs" />
+        <Compile Include="Effects\EffectTypes\QuickEffect.cs" />
+        <Compile Include="Effects\EffectTypes\TriggerEffect.cs" />
+        <Compile Include="Effects\IEffect.cs" />
+        <Compile Include="Enums\Attribute.cs" />
+        <Compile Include="Enums\CardType.cs" />
+        <Compile Include="Enums\CardTyping.cs" />
+        <Compile Include="Match.cs" />
+        <Compile Include="MatchUtils\Chain.cs" />
+        <Compile Include="MatchUtils\Field.cs" />
+        <Compile Include="MatchUtils\FieldSide.cs" />
+        <Compile Include="MatchUtils\IPhase.cs" />
+        <Compile Include="MatchUtils\Phases\BattlePhase.cs" />
+        <Compile Include="MatchUtils\Phases\DrawPhase.cs" />
+        <Compile Include="MatchUtils\Phases\EndPhase.cs" />
+        <Compile Include="MatchUtils\Phases\FinalState.cs" />
+        <Compile Include="MatchUtils\Phases\MainPhase1.cs" />
+        <Compile Include="MatchUtils\Phases\MainPhase2.cs" />
+        <Compile Include="MatchUtils\Phases\StandbyPhase.cs" />
+        <Compile Include="MatchUtils\Phases\Steps\DamageStep.cs" />
+        <Compile Include="Player.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Utils\ListExtensions.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="packages.config" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
